@@ -13,7 +13,10 @@ public:
     UniquePtr(T* arr);
     UniquePtr(); // default constructor
     ~UniquePtr();
+    UniquePtr(const UniquePtr& t);
     T* get();
+    UniquePtr<T>& operator=(UniquePtr& t) = delete;
+    T& operator*();
 
 private:
     T* _p;

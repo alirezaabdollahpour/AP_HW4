@@ -22,3 +22,15 @@ T* UniquePtr<T>::get()
 {
     return _p;
 }
+template <typename T>
+UniquePtr<T>::UniquePtr(const UniquePtr<T>& t)
+{
+    // if (t != nullptr)
+    throw std::logic_error { std::string { "error" } };
+}
+template <typename T>
+T& UniquePtr<T>::operator*()
+{
+    std::cout << "operator* called" << std::endl;
+    return *_p;
+}
