@@ -11,6 +11,7 @@ public:
     // UniquePtr<int> ptr { new int { 10 } };
     UniquePtr(T* arr);
     UniquePtr(); // default constructor
+    ~UniquePtr();
 
 private:
     T* _p;
