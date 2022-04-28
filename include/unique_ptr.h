@@ -3,6 +3,7 @@
 
 #include <compare>
 #include <iostream>
+#include <string>
 #include <typeinfo>
 #include <utility>
 template <typename T>
@@ -12,6 +13,7 @@ public:
     UniquePtr(T* arr);
     UniquePtr(); // default constructor
     ~UniquePtr();
+    T* get();
 
 private:
     T* _p;

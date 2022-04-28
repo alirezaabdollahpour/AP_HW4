@@ -5,12 +5,12 @@
 
 int main(int argc, char** argv)
 {
-    if (true) // make false to run unit-tests
+    if (false) // make false to run unit-tests
     {
         // debug section
         // std::cout << "everything is ok!" << std::endl;
         UniquePtr<int> ptr { new int { 10 } };
-        UniquePtr<int> ptr2;
+        UniquePtr<std::string> ptr2 { new std::string { "hello world!" } };
 
     } else {
         ::testing::InitGoogleTest(&argc, argv);

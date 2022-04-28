@@ -13,6 +13,8 @@ compare
 -
 iostream
 -
+string
+-
 typeinfo
 -
 utility

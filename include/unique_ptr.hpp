@@ -15,5 +15,10 @@ template <typename T>
 UniquePtr<T>::~UniquePtr()
 {
     std::cout << "destructor " << std::endl;
-    delete[] _p;
+    delete _p;
+}
+template <typename T>
+T* UniquePtr<T>::get()
+{
+    return _p;
 }
