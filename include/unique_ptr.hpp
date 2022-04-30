@@ -60,3 +60,10 @@ UniquePtr<T>::operator bool()
     else
         return true;
 }
+template <typename T>
+T* UniquePtr<T>::release()
+{
+    T* q { _p };
+    _p = nullptr;
+    return q;
+}

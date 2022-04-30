@@ -7,13 +7,10 @@ int main(int argc, char** argv)
 {
     if (false) // make false to run unit-tests
     {
-        // debug section
-        // std::cout << "everything is ok!" << std::endl;
-        // UniquePtr<int> ptr { new int { 10 } };
-        // std::cout << *ptr << std::endl; // output: 10
-        UniquePtr<std::string> ptr { new std::string { "hello" } };
-        ptr.reset(new std::string { "nice" });
-        std::cout << *ptr << std::endl; // output: nice
+        UniquePtr<double> ptr { new double { 1.567 } };
+        double* tmp { ptr.release() };
+        std::cout << *tmp << std::endl; // output: 1.567
+        // delete tmp; // manual deletion
 
     } else {
         ::testing::InitGoogleTest(&argc, argv);

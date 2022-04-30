@@ -22,6 +22,7 @@ public:
     void reset();
     void reset(T* t);
     operator bool();
+    T* release();
 
 private:
     T* _p;

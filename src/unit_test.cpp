@@ -79,7 +79,7 @@ TEST(HW4Test, TEST8)
         ptr.reset();
     EXPECT_FALSE(ptr);
 }
-/*
+
 TEST(HW4Test, TEST9)
 {
     UniquePtr<double> ptr { new double { 1.567 } };
@@ -91,7 +91,7 @@ TEST(HW4Test, TEST9)
     EXPECT_FALSE(ptr);
     delete tmp;
 }
-
+/*
 TEST(HW4Test, TEST10)
 {
     SharedPtr<int> ptr1 { new int { 10 } };
