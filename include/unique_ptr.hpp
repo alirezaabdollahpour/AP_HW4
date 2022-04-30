@@ -45,3 +45,18 @@ T* UniquePtr<T>::operator->()
 {
     return _p;
 }
+template <typename T>
+void UniquePtr<T>::reset(T* t)
+{
+    delete _p;
+    _p = t;
+    // return *_p;
+}
+template <typename T>
+UniquePtr<T>::operator bool()
+{
+    if (_p == nullptr)
+        return false;
+    else
+        return true;
+}

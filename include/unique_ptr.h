@@ -20,6 +20,8 @@ public:
     T& operator*();
     T* operator->();
     void reset();
+    void reset(T* t);
+    operator bool();
 
 private:
     T* _p;
