@@ -18,6 +18,7 @@ public:
     T* get();
     UniquePtr<T>& operator=(UniquePtr& t) = delete;
     T& operator*();
+    T* operator->();
     void reset();
 
 private:
