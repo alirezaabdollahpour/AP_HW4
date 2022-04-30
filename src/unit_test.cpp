@@ -15,34 +15,37 @@ TEST(HW4Test, TEST1)
     UniquePtr<std::string> ptr2 { new std::string { "hello world!" } };
     EXPECT_EQ(*ptr2.get(), "hello world!");
 }
-/*
-TEST(HW4Test, TEST2) {
-    UniquePtr<int> ptr1{make_unique<int>(10)};
+
+TEST(HW4Test, TEST2)
+{
+    UniquePtr<int> ptr1 { make_unique<int>(10) };
     EXPECT_EQ(*ptr1.get(), 10);
 
-    UniquePtr<std::string> ptr2{make_unique<std::string>("hello world!")};
+    UniquePtr<std::string> ptr2 { make_unique<std::string>("hello world!") };
     EXPECT_EQ(*ptr2.get(), "hello world!");
 }
 
-TEST(HW4Test, TEST3) {
+TEST(HW4Test, TEST3)
+{
     UniquePtr<int> ptr1;
     EXPECT_EQ(ptr1.get(), nullptr);
 
-    UniquePtr<std::string> ptr2{};
+    UniquePtr<std::string> ptr2 {};
     EXPECT_EQ(ptr2.get(), nullptr);
 }
 
-TEST(HW4Test, TEST4) {
-    UniquePtr<int> ptr1{new int{10}};
+TEST(HW4Test, TEST4)
+{
+    UniquePtr<int> ptr1 { new int { 10 } };
     EXPECT_EQ(*ptr1, 10);
 
-    UniquePtr<std::string> ptr2{new std::string{"hello world!"}};
+    UniquePtr<std::string> ptr2 { new std::string { "hello world!" } };
     EXPECT_EQ(*ptr2, "hello world!");
 
-    UniquePtr<std::vector<int>> ptr3{new std::vector<int>{1, 2, 3, 4, 5}};
+    UniquePtr<std::vector<int>> ptr3 { new std::vector<int> { 1, 2, 3, 4, 5 } };
     EXPECT_EQ((*ptr3)[1], 2);
 }
-
+/*
 TEST(HW4Test, TEST5) {
     UniquePtr<std::string> ptr1{new std::string{"hello world!"}};
     EXPECT_EQ(ptr1->length(), 12);

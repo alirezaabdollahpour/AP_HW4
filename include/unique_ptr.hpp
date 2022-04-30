@@ -34,3 +34,9 @@ T& UniquePtr<T>::operator*()
     std::cout << "operator* called" << std::endl;
     return *_p;
 }
+template <typename T>
+void UniquePtr<T>::reset()
+{
+    delete _p;
+    _p = nullptr;
+}

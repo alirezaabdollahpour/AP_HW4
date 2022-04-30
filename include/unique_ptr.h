@@ -3,6 +3,7 @@
 
 #include <compare>
 #include <iostream>
+#include <memory>
 #include <string>
 #include <typeinfo>
 #include <utility>
@@ -17,10 +18,17 @@ public:
     T* get();
     UniquePtr<T>& operator=(UniquePtr& t) = delete;
     T& operator*();
+    void reset();
 
 private:
     T* _p;
 };
+
+template <typename T>
+T* make_unique(T t)
+{
+    return new T { t };
+}
 
 #include "unique_ptr.hpp"
 #endif // UNIQUE_PTR

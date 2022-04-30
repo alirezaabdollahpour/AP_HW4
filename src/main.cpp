@@ -10,7 +10,7 @@ int main(int argc, char** argv)
         // debug section
         // std::cout << "everything is ok!" << std::endl;
         UniquePtr<int> ptr { new int { 10 } };
-        UniquePtr<std::string> ptr2 { new std::string { "hello world!" } };
+        std::cout << *ptr << std::endl; // output: 10
 
     } else {
         ::testing::InitGoogleTest(&argc, argv);

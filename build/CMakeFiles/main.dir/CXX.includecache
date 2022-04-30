@@ -13,6 +13,8 @@ compare
 -
 iostream
 -
+memory
+-
 string
 -
 typeinfo
@@ -32,5 +34,21 @@ unique_ptr.h
 gtest/gtest.h
 -
 iostream
+-
+
+/usr/src/app/src/unit_test.cpp
+gmock/gmock.h
+/usr/src/app/src/gmock/gmock.h
+gtest/gtest.h
+/usr/src/app/src/gtest/gtest.h
+algorithm
+-
+shared_ptr.h
+/usr/src/app/src/shared_ptr.h
+unique_ptr.h
+/usr/src/app/src/unique_ptr.h
+string
+-
+vector
 -
 
