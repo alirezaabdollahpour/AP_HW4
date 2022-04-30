@@ -7,10 +7,8 @@ int main(int argc, char** argv)
 {
     if (false) // make false to run unit-tests
     {
-        UniquePtr<double> ptr { new double { 1.567 } };
-        double* tmp { ptr.release() };
-        std::cout << *tmp << std::endl; // output: 1.567
-        // delete tmp; // manual deletion
+        // SharedPtr<int> ptr { new int { 10 } };
+        SharedPtr<int> ptr { make_shared<int>(10) };
 
     } else {
         ::testing::InitGoogleTest(&argc, argv);
