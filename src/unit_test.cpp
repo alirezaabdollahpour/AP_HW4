@@ -194,7 +194,7 @@ TEST(HW4Test, TEST18)
     EXPECT_EQ(ptr.get(), nullptr);
     EXPECT_EQ(ptr.use_count(), 0);
 }
-/*
+
 TEST(HW4Test, TEST19)
 {
     SharedPtr<std::string> ptr { new std::string { "hello world!" } };
@@ -203,15 +203,15 @@ TEST(HW4Test, TEST19)
     EXPECT_EQ(*ptr, "nice job!");
     EXPECT_EQ(ptr.use_count(), 1);
 }
-
-TEST(HW4Test, TEST20) {
-    SharedPtr<double> ptr{new double{1.567}};
+/*
+TEST(HW4Test, TEST20)
+{
+    SharedPtr<double> ptr { new double { 1.567 } };
     EXPECT_DOUBLE_EQ(*ptr, 1.567);
-    if(ptr)
+    if (ptr)
         ptr.reset();
     EXPECT_FALSE(ptr);
 }
-
 TEST(HW4Test, TEST21) {
     SharedPtr<double> ptr1{new double{1.567}};
     SharedPtr<double> ptr2{new double{5.1234}};
