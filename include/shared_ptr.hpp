@@ -19,6 +19,10 @@ SharedPtr<T>::~SharedPtr()
     _p = nullptr;
     delete _p;
     --(*counter);
+    if (*counter == 0) {
+        delete counter;
+        counter = new int {};
+    }
 }
 template <typename T>
 T* SharedPtr<T>::get()
@@ -70,3 +74,22 @@ SharedPtr<T>::operator bool()
     else
         return true;
 }
+template <typename T>
+SharedPtr<T>& SharedPtr<T>::operator=(const SharedPtr& ptr)
+{
+    if (this == &ptr)
+        return *this;
+    _p = ptr._p;
+    counter = ptr.counter;
+    ++(*counter);
+    return *this;
+}
+// T& SharedPtr<T>::operator=(const T& ptr)
+// {
+//     if (this == &ptr)
+//         return *this;
+//     _p = ptr._p;
+//     counter = ptr.counter;
+//     ++(*counter);
+//     return *this;
+// }

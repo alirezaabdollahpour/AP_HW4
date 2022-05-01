@@ -21,6 +21,8 @@ public:
     void reset();
     void reset(T* t);
     operator bool();
+    SharedPtr<T>& operator=(const SharedPtr& ptr);
+    // T& operator=(const T& ptr);
 
 private:
     T* _p;
