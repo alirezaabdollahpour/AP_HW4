@@ -42,16 +42,6 @@ unique_ptr.hpp
 
 ../include/unique_ptr.hpp
 
-/usr/src/app/src/main.cpp
-shared_ptr.h
-/usr/src/app/src/shared_ptr.h
-unique_ptr.h
-/usr/src/app/src/unique_ptr.h
-gtest/gtest.h
--
-iostream
--
-
 /usr/src/app/src/unit_test.cpp
 gmock/gmock.h
 /usr/src/app/src/gmock/gmock.h

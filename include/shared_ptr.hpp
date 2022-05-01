@@ -43,3 +43,8 @@ T& SharedPtr<T>::operator*()
 {
     return *_p;
 }
+template <typename T>
+T* SharedPtr<T>::operator->()
+{
+    return _p;
+}
