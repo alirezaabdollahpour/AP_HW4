@@ -203,7 +203,7 @@ TEST(HW4Test, TEST19)
     EXPECT_EQ(*ptr, "nice job!");
     EXPECT_EQ(ptr.use_count(), 1);
 }
-/*
+
 TEST(HW4Test, TEST20)
 {
     SharedPtr<double> ptr { new double { 1.567 } };
@@ -212,6 +212,7 @@ TEST(HW4Test, TEST20)
         ptr.reset();
     EXPECT_FALSE(ptr);
 }
+/*
 TEST(HW4Test, TEST21) {
     SharedPtr<double> ptr1{new double{1.567}};
     SharedPtr<double> ptr2{new double{5.1234}};

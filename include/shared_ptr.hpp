@@ -55,3 +55,18 @@ void SharedPtr<T>::reset()
     delete _p;
     --(*counter);
 }
+template <typename T>
+void SharedPtr<T>::reset(T* t)
+{
+    delete _p;
+    _p = t;
+    // return *_p;
+}
+template <typename T>
+SharedPtr<T>::operator bool()
+{
+    if (_p == nullptr)
+        return false;
+    else
+        return true;
+}

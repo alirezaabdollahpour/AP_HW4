@@ -7,8 +7,9 @@ int main(int argc, char** argv)
 {
     if (false) // make false to run unit-tests
     {
-        // SharedPtr<int> ptr { new int { 10 } };
-        SharedPtr<int> ptr { make_shared<int>(10) };
+        SharedPtr<std::string> ptr { new std::string { "hello" } };
+        ptr.reset(new std::string { "nice" });
+        std::cout << *ptr << std::endl; // output: nice
 
     } else {
         ::testing::InitGoogleTest(&argc, argv);
