@@ -13,10 +13,14 @@ public:
     SharedPtr(T* arr);
     SharedPtr();
     ~SharedPtr();
+    SharedPtr(const SharedPtr& t);
+    T& operator*();
     T* get();
+    int use_count();
 
 private:
     T* _p;
+    int* counter;
 };
 
 template <typename T>
