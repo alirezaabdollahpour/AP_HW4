@@ -18,6 +18,7 @@ public:
     T* get();
     int use_count();
     T* operator->();
+    void reset();
 
 private:
     T* _p;

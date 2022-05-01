@@ -48,3 +48,10 @@ T* SharedPtr<T>::operator->()
 {
     return _p;
 }
+template <typename T>
+void SharedPtr<T>::reset()
+{
+    _p = nullptr;
+    delete _p;
+    --(*counter);
+}

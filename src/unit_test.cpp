@@ -185,7 +185,7 @@ TEST(HW4Test, TEST17)
     SharedPtr<std::vector<int>> ptr3 { new std::vector<int> { 1, 2, 3, 4, 5 } };
     EXPECT_FALSE(ptr3->empty());
 }
-/*
+
 TEST(HW4Test, TEST18)
 {
     SharedPtr<std::string> ptr { new std::string { "hello world!" } };
@@ -194,11 +194,12 @@ TEST(HW4Test, TEST18)
     EXPECT_EQ(ptr.get(), nullptr);
     EXPECT_EQ(ptr.use_count(), 0);
 }
-
-TEST(HW4Test, TEST19) {
-    SharedPtr<std::string> ptr{new std::string{"hello world!"}};
+/*
+TEST(HW4Test, TEST19)
+{
+    SharedPtr<std::string> ptr { new std::string { "hello world!" } };
     EXPECT_EQ(ptr->length(), 12);
-    ptr.reset(new std::string{"nice job!"});
+    ptr.reset(new std::string { "nice job!" });
     EXPECT_EQ(*ptr, "nice job!");
     EXPECT_EQ(ptr.use_count(), 1);
 }
